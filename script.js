@@ -53,6 +53,7 @@ document.querySelector('body').addEventListener('keyup', (e) => {
         verification(key.toLocaleUpperCase());
     }else{
         showDanger('Suas tentativas acabaram!');
+        playerRespect(5);
         buttonRestart = true;
     }
 
