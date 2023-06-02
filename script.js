@@ -42,6 +42,7 @@ let words = [
             'BALEIAJUBARTE', 'CAVALOMARINHO', 'TARTARUGAMARINHA', 'BAIACU', 'GOLFINHOS', 'ARRAIASJAMANTA', 'BAIACUESPINHO'
         ]
     }
+
 ]
 
 let wordsObjects = words.length;
