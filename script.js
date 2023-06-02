@@ -35,6 +35,10 @@ let words = [
         word: [
             'HONDA', 'DUCATI', 'BMW', 'BULL', 'MOTORINO', 'KAWASAKI', 'KTM', 'TRIUMPH', 'YAMAHA', 'SUZUKI', 'TRAXX', 'WATTS', 'SHINERAY', 'MOTOCAR', 'MOTTU', 'BRP', 'AVELLOZ', 'BAJAJ', 'DAFRA', 'KYMCO'
         ]
+    },
+    {
+        title: 'NOME DE ANIMAIS MARIHOS',
+        word: 'BALEIAJUBARTE','CAVALOMARINHO','TARTARUGAMARINHA','BAIACU','GOLFINHOS','ARRAIASJAMANTA', 'BAIACUESPINHO';
     }
 ]
 
