@@ -118,7 +118,7 @@ function insertElement(index, key){
         showWordFound(`Parabens você conseguiu!<br/> Palavra: <strong>" ${campCheck.join('')} "</strong>`);
         storageMoney(2);
         buttonRestart = true;
-        increaseRespect(5);
+        increaseRespect(2);
     }
 
 }
