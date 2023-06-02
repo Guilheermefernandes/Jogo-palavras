@@ -12,7 +12,7 @@ document.querySelector('.tipMoney').addEventListener('click', () => {
             elementMsg.innerHTML = `Você não possui cents o suficiente: Possui apenas ${moneyStorage} cents.`
         }
     }else{
-        elementMsg.innerHTML = `Você já possui uma dica, use ela antes de comprar outra!`
+        elementMsg.innerHTML = `Você já possui uma dica, use ela antes de comprar outra!`;
     }
 });
 
