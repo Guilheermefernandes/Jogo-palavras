@@ -40,7 +40,7 @@ let words = [
         title: 'NOME DE ANIMAIS MARIHOS',
         word: [
             'BALEIAJUBARTE','CAVALOMARINHO','TARTARUGAMARINHA','BAIACU','GOLFINHOS','ARRAIASJAMANTA', 'BAIACUESPINHO';
-            }
+            ]
         }
 ]
 
