@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
+    <script src="life.js" defer></script>
+    <script src="dica.js" defer></script>
+    <script src="restart.js" defer></script>
+    <script src="money.js" defer></script>
+    <script src="buyTip.js" defer></script>
+    <script src="playerRespect.js" defer></script>
+    <title>Jogo de Palavras</title>
+</head>
+<body>
+    <div class="unexpectedError"></div>
+    <div class="nameUser">Olá!</div>
+    <div class="playerRespect"></div>
+    <div class="areaPlayerLevel">
+        <div class="barPlayer">
+            <div class="barGreen"></div>
+            <div class="barOrange"></div>
+            <div class="barRed"></div>
+        </div>
+        <div class="barPonteiro">
+            <div class="ponteiro"></div>
+        </div>
+    </div>
+    <div class="theme">TEMA</div>
+    <div class="title"></div>
+    <div class="attempts"></div>
+    <div class="container"></div>
+    <div class="tipText"></div>
+    <div class="msg"></div>
+    <div class="buttons">
+        <button>Nova Palavra</button>
+        <button class="tip">Dica</button>
+    </div>
+    <div class="tipText">Use a dica com sabedoria! Só pode ser usada 1 vez.</div>
+    <div class="areaMercado">
+        <div class="money">Money: <span></span> cents</div>
+        <div class="lifeArea">
+            <div class="titleLifeMoney">Comprar Vida:</div>
+            <button class="life" value="1"> 1 = 4 Cents</button>
+            <button class="life" value="2"> 2 = 8 Cents</button>
+            <button class="life" value="3"> 3 = 12 Cents</button>
+            <button class="life" value="4"> 4 = 16 Cents</button>
+        </div>
+        <div class="tipArea">
+            <div class="titleTipMoney">Comprar Dica:</div>
+            <button class="tipMoney">1 Dica = 20 Cents</button>
+        </div>
+    </div>
+    <div class="copy">Feito por <span>Guilherme<span></div>
+    <div class="danger"></div>
+</body>
+</html>
