@@ -8,18 +8,21 @@ function shoppingInTheMarket(n, value){
 
     let elementMsg = document.querySelector('.msg');
     let getValueStorage = parseInt(localStorage.getItem('money'));
-    if(getValueStorage >= n){
+    if(getValueStorage >= n && life === 1){
         let calc = getValueStorage - n;
         localStorage.setItem('money', calc);
         life += parseInt(value);
         attMoney();
         playerRespect(10);
     }else{
-        elementMsg.innerHTML = `Você não possui cents o suficiente! Tem apenas ${getValueStorage} cents.`;
+        if(life > 1 && getValueStorage > n){
+            elementMsg.innerHTML = `Você precisa de estar com 1 de life para poder comprar: Você possui ${life} de life!`;
+        }else if(life === 1 && getValueStorage < n){
+            elementMsg.innerHTML = `Você possui apenas ${getValueStorage} de coins!`;
+        }
         setTimeout(() => {
             elementMsg.innerHTML = '';
-        }, 4000)
-        
+        }, 4000);
     }
 
 }
