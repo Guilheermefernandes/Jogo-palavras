@@ -19,6 +19,7 @@ function restartGame(){
     attMoney()
     reponse = false;
     clickButton = true;
+    withoutAttempts = false;
     verificationKey = '';
     campCheck = [];
     for(let i in wordSelect.split('')){
