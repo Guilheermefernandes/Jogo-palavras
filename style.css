@@ -4,7 +4,8 @@
     font-family: 'Kanit';
 }
 body{
-    background-color: #2f3136;
+    background-color: #000;
+    background-size: 500% 100%;
     padding: 0px;
     margin: 0px;
     height: 100vh;
@@ -12,6 +13,14 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+@keyframes animation-gradiente{
+    0%{
+        background-position-x: 0%;
+    }
+    100%{
+        background-position-x: 100%;
+    }
 }
 .unexpectedError{
     margin-bottom: 10px;
@@ -119,9 +128,10 @@ body{
 button{
     padding: 10px;
     background-color: #202225;
+    border-radius: 5px;
+    color: #fff;
     border: none;
     border: 1px solid #000;
-    color: #fff;
     cursor: pointer;
 }
 .tipText{
@@ -135,7 +145,7 @@ button{
     font-style: italic;
     letter-spacing: 4px;
     margin-top: 50px;
-    color: #000;
+    color: #fff;
 }
 .copy span{
     text-decoration: underline;
@@ -161,6 +171,7 @@ button{
     padding: 5px;
     background-color: #202225;
     border: 1px solid #000;
+    border-radius: 5px;
     color: #fff;
 }
 .money{
@@ -186,4 +197,7 @@ button{
 }
 .tipArea button{
     width: 363px;
+}
+#resetPlayer{
+    margin-top: 30px;
 }
