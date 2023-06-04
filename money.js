@@ -7,19 +7,17 @@ function attMoney(){
 function shoppingInTheMarket(n, value){
 
     let elementMsg = document.querySelector('.msg');
-    let getValueStorage = parseInt(localStorage.getItem('money'));
-    if(getValueStorage >= n && life === 1){
+    let getValueStorage = localStorage.getItem('money');
+
+    if(parseInt(getValueStorage) >= n && life === 1){
         let calc = getValueStorage - n;
         localStorage.setItem('money', calc);
         life += parseInt(value);
         attMoney();
         playerRespect(10);
     }else{
-        if(life > 1 && getValueStorage > n){
-            elementMsg.innerHTML = `Você precisa de estar com 1 de life para poder comprar: Você possui ${life} de life!`;
-        }else if(life === 1 && getValueStorage < n){
-            elementMsg.innerHTML = `Você possui apenas ${getValueStorage} de coins!`;
-        }
+        console.log(getValueStorage);
+        elementMsg.innerHTML = `Vcoê precisa estar com 1 de life: ${life} life | Você precisa de ${n} coins: ${getValueStorage === null ? '0' : getValueStorage} coins. `;
         setTimeout(() => {
             elementMsg.innerHTML = '';
         }, 4000);
@@ -27,8 +25,10 @@ function shoppingInTheMarket(n, value){
 
 }
 
+
 document.querySelectorAll('.life').forEach((item) => {
     item.addEventListener('click', (e) => {
+        let element = document.querySelector('.unexpectedError');
         let elementClick = e.target
         let valueElement = elementClick.getAttribute('value');
         switch (valueElement){
@@ -45,6 +45,7 @@ document.querySelectorAll('.life').forEach((item) => {
                 shoppingInTheMarket(16, valueElement);
                 break
             default:
+                element.innerHTML = `Ocorreu um error Inesperado!`;
                 break
         }
     })
