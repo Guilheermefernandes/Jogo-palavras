@@ -39,7 +39,7 @@ let words = [
     {
         title: 'NOME DE ANIMAIS MARIHOS',
         word: [
-            'BALEIAJUBARTE', 'CAVALOMARINHO', 'TARTARUGAMARINHA', 'BAIACU', 'GOLFINHOS', 'ARRAIASJAMANTA', 'BAIACUESPINHO'
+            'BALEIAJUBARTE', 'CAVALOMARINHO', 'TARTARUGAMARINHA', 'BAIACU', 'GOLFINHO', 'ARRAIAJAMANTA', 'BAIACUESPINHO'
         ]
     }
 
@@ -51,6 +51,7 @@ let verificationKey = '';
 let life = 0;
 let campCheck = [];
 let reponse = false;
+let withoutAttempts = false;
 
 document.querySelector('body').addEventListener('keyup', (e) => {
 
@@ -59,9 +60,7 @@ document.querySelector('body').addEventListener('keyup', (e) => {
     if(life > 0){
         verification(key.toLocaleUpperCase());
     }else{
-        showDanger('Suas tentativas acabaram!');
-        playerRespect(5);
-        buttonRestart = true;
+        return false;
     }
 
 });
@@ -100,6 +99,14 @@ function verification(key){
             }
         }else{
             erroKey();
+            playerRespect(1);
+            if(life === 0){  // Verificação de Funcionamento!
+                showDanger('Suas tentavias acabaram!');
+                playerRespect(5);
+                clickButton = false;
+                withoutAttempts = true;
+                buttonRestart = true;
+            }
         }
     }
 }
@@ -118,6 +125,7 @@ function insertElement(index, key){
         indexItem.setAttribute('value', key);
         campCheck[index] = key;
         indexItem.innerHTML = key;
+        indexItem.style.border = '1px solid #0f0'
         reponse = fieldCheck(); 
     }
 
@@ -125,7 +133,7 @@ function insertElement(index, key){
         showWordFound(`Parabens você conseguiu!<br/> Palavra: <strong>" ${campCheck.join('')} "</strong>`);
         storageMoney(2);
         buttonRestart = true;
-        increaseRespect(2);
+        increaseRespect(3);
     }
 
 }
