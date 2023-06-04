@@ -13,8 +13,9 @@ function playerRespect(n){
 function getStorage(){
     let element = document.querySelector('.ponteiro');  
     let storage = localStorage.getItem('respect');
-    if(storage == null){
+    if(storage === null){
         localStorage.setItem('respect', value);
+        element.style.left = `${storage >= 160 ? 160 : storage}px`; 
     }else{
         playerVantage(parseInt(storage));
         element.style.left = `${storage >= 160 ? 160 : storage}px`; 
